@@ -1,4 +1,6 @@
 import express from "express";
+import { response } from "express";
+import { request } from "express";
 const router = express.Router();
 const products = [
     {id:1,name:"Product 1"},
@@ -15,4 +17,8 @@ router.post('/products',(request,response)=>{
     products.push(request.body)
     response.json(product)
 });
+router.delete('/products:id',(request,response) =>{
+    const product = products.filter(item.id === +request.params.id)
+    response.json(product)
+})
 export default router;
