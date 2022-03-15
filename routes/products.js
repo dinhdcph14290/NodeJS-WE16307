@@ -18,7 +18,10 @@ router.post('/products',(request,response)=>{
     response.json(product)
 });
 router.delete('/products:id',(request,response) =>{
-    const product = products.filter(item.id === +request.params.id)
+    const product = products.filter(item.id != +request.params.id)
     response.json(product)
+})
+router.put('/products/:id',(request,response)=>{
+    response.json(products.map(item => item.id === +request.params.id ? request.body : item))
 })
 export default router;
