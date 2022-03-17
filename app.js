@@ -1,6 +1,5 @@
 import express from 'express';
 import morgan from 'morgan';
-import mongoose from 'mongose'
 import homeRoute from './routes/home'
 import productRoute from './routes/products'
 const app = express();
