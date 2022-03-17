@@ -4,8 +4,9 @@ import homeRoute from './routes/home'
 import productRoute from './routes/products'
 const app = express();
 
-app.use(express.json()) 
-// to read json data when uploaded
+
+app.use(morgan('combined'))
+app.use(express.json())  // to read json data when uploaded
 app.use(homeRoute);
 app.use("/api",productRoute);
 
