@@ -1,9 +1,11 @@
 import express from 'express';
+import morgan from 'morgan';
 import homeRoute from './routes/home'
 import productRoute from './routes/products'
 const app = express();
 
-app.use(express.json())
+app.use(express.json()) 
+// to read json data when uploaded
 app.use(homeRoute);
 app.use("/api",productRoute);
 
