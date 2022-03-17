@@ -12,7 +12,7 @@ const products = [
 router.get('/products',(request,response)=>{
     response.json(products)
 });
-// Show detail 
+// Show detail  
 router.get('/products/:id',(request,response)=>{
     const product = products.find(item => item.id === +request.params.id)
     response.json(product)
