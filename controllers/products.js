@@ -47,7 +47,7 @@ export const deleteProduct =async (request,response) =>{
 export const updateProduct = async (request,response)=>{
     try {
         const product =await Product.findOneAndUpdate({_id:request.params.id},request.body,{new:true}).exec()
-        response.json()
+        response.json(product)
     } catch (error) {
         response.status(400).json({message:"Khong cap nhat duoc"})
     }
