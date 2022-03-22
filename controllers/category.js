@@ -1,7 +1,7 @@
 import { response } from "express";
 import { request } from "express";
 import Category from "../models/category";
-import Products from "../models/products";
+import Product from "../models/products";
 
 export const createCategory =async (request,response) => {
     try {
@@ -39,7 +39,7 @@ export const deleteCategory = async (request,response) => {
         response.json(category)
     } catch (error) {
         response.status(400).json({message:"Không xóa được sản phẩm này!"})
-    }
+    }   
 }
 export const updateCategory = async (request,response) => {
     try {
