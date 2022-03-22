@@ -6,7 +6,7 @@ import productRoute from './routes/products'
 const app = express();
 
 
-app.use(morgan('combined'))
+app.use(morgan('tiny'))
 app.use(express.json())  // to read json data when uploaded
 
 app.use(homeRoute);
