@@ -1,9 +1,4 @@
 import Product from "../models/products"
-// const products = [
-//     {id:1,name:"Product 1"},
-//     {id:2,name:"Product 2"},
-//     {id:3,name:"Product 3"}
-//]
 
 export const listProduct = async (request,response)=>{
     try {
@@ -12,7 +7,6 @@ export const listProduct = async (request,response)=>{
     } catch (error) {
         response.status(400).json({message:"Loi khong hien thi duoc"})
     }
-    // response.json(products)
 }
 export const listProductDetail =async (request,response)=>{
     try {
@@ -21,8 +15,6 @@ export const listProductDetail =async (request,response)=>{
     } catch (error) {
         response.status(400).json({message:"Khong the hien thi"})
     }
-    // const product = products.find(item => item.id === +request.params.id)
-    // response.json(product)
 }
 export const createProduct = async (request,response)=>{
     try {
@@ -31,8 +23,6 @@ export const createProduct = async (request,response)=>{
     } catch (error) {
         response.status(400).json({message:"Khong the them san pham"})
     }
-    // products.push(request.body)
-    // response.json(products)
 }
 export const deleteProduct =async (request,response) =>{
     try {
@@ -41,8 +31,6 @@ export const deleteProduct =async (request,response) =>{
     } catch (error) {
         response.status(400).json({message:"Khong xoa duoc"})
     }
-    // const product = products.filter(item.id != +request.params.id)
-    // response.json(product)
 }
 export const updateProduct = async (request,response)=>{
     try {
@@ -51,5 +39,4 @@ export const updateProduct = async (request,response)=>{
     } catch (error) {
         response.status(400).json({message:"Khong cap nhat duoc"})
     }
-    // response.json(products.map(item => item.id === +request.params.id ? request.body : item))
 }

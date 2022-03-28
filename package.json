@@ -1,6 +1,8 @@
 {"name":"nodejs-we16307","version":"1.0.0",
     "description":"","main":"app.js",
-    "scripts":{"start":"nodemon app.js --exec babel-node -e js"},
+    "scripts":{
+        "start":"nodemon app.js --exec babel-node -e js"
+    },
     "keywords":[],"author":"",
         "license":"ISC",
         "dependencies":{
