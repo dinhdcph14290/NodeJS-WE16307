@@ -2,7 +2,6 @@ import User from '../models/user'
 
 export const signup = async (request,response)=>{
     const {email,name,password} = request.body
-    console.log(request.body)
     try {
         const existUser = await User.findOne({email}).exec()
         if(existUser){
