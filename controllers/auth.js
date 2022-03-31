@@ -25,7 +25,8 @@ export const signup = async (request,response)=>{
 
 export const signin = async (request,response)=>{
     const {email,password} = request.body
-    const user = await User.findOne({email}).exec()
+    try {
+        const user = await User.findOne({email}).exec()
     if(!user){
         return response.status(400).json({
             message:"User khong ton tai"
@@ -45,4 +46,9 @@ export const signin = async (request,response)=>{
             name:user.name
         }
     })
+    } catch (error) {
+        response.status(400).json({
+            message:"Dang nhap that bai!"
+        })
+    }
 }
